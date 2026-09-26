@@ -49,8 +49,8 @@ It runs two things, both on your machine: `maistro playbook <role>` (the Beegait
 tool, installed separately) when a skill is invoked, and the three hook scripts below (standard-library
 Python, reading the tool input on stdin). It sends nothing anywhere, fetches nothing, opens no network
 connection, reads no credential and changes no permission setting; the engine it calls talks to the
-Beegait cloud only when this machine's runner is paired, on the engine's own terms. The `evals/` folder
-is test scaffolding for `claude plugin eval` — Claude Code never loads it.
+Beegait cloud only when this machine's runner is paired, on the engine's own terms. The hooks are launched
+by name through `hooks/run.sh`, whose exec lines are literal paths from `${CLAUDE_PLUGIN_ROOT}`.
 
 ## Hooks (`hooks/hooks.json`, `PreToolUse`)
 
@@ -86,7 +86,9 @@ What an agent DOES with a skill, graded (card MV2-12): `claude plugin eval plugi
 24 cases with and without the plugin — the DB gate held, To Test never Done, a 📝 Request untouched, a release
 note covering its scope, one should-trigger and one near-miss prompt per skill — every case starting from the
 scratch hub `evals/_setup_hub.py` builds. Real tokens; the engine gate's `full` tier runs it only under
-`MAISTRO_PLUGIN_EVAL=1`. `evals/README.md` has the layout, the run lines and the CLI's rules of the road.
+`MAISTRO_PLUGIN_EVAL=1`. `evals/README.md` has the layout, the run lines and the CLI's rules of the road. The
+evals live in the engine repository only: the public mirror and the listed plugin carry no `evals/` folder
+(test scaffolding reads as plugin behaviour to the directory's scanner).
 
 ## Regenerating
 

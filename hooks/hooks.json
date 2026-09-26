@@ -1,5 +1,5 @@
 {
-  "description": "Beegait's Claude-side belt (card MV2-11): three PreToolUse guards, each a stdlib Python script that reads the tool input on stdin and refuses with exit 2 — never force-push (the account's Security rule), never edit inside a card's 📝 Request section (the manager's verbatim words), never set a card to Done (the manager accepts on the board). Launched through hooks/run.sh: `python` else `python3`; with neither, one loud stderr line on every tool call (the belt is OFF, never silently).",
+  "description": "Beegait's Claude-side belt (card MV2-11): three PreToolUse guards, each a stdlib Python script that reads the tool input on stdin and refuses with exit 2 — never force-push (the account's Security rule), never edit inside a card's 📝 Request section (the manager's verbatim words), never set a card to Done (the manager accepts on the board). Launched through hooks/run.sh by NAME (every exec line literal, from ${CLAUDE_PLUGIN_ROOT} — the directory's scan rule): `python` else `python3`; with neither, one loud stderr line on every tool call (the belt is OFF, never silently).",
   "hooks": {
     "PreToolUse": [
       {
@@ -7,7 +7,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "sh \"${CLAUDE_PLUGIN_ROOT}/hooks/run.sh\" \"${CLAUDE_PLUGIN_ROOT}/hooks/no_force_push.py\"",
+            "command": "sh \"${CLAUDE_PLUGIN_ROOT}/hooks/run.sh\" no_force_push",
             "timeout": 10
           }
         ]
@@ -17,12 +17,12 @@
         "hooks": [
           {
             "type": "command",
-            "command": "sh \"${CLAUDE_PLUGIN_ROOT}/hooks/run.sh\" \"${CLAUDE_PLUGIN_ROOT}/hooks/no_request_edit.py\"",
+            "command": "sh \"${CLAUDE_PLUGIN_ROOT}/hooks/run.sh\" no_request_edit",
             "timeout": 10
           },
           {
             "type": "command",
-            "command": "sh \"${CLAUDE_PLUGIN_ROOT}/hooks/run.sh\" \"${CLAUDE_PLUGIN_ROOT}/hooks/no_agent_done.py\"",
+            "command": "sh \"${CLAUDE_PLUGIN_ROOT}/hooks/run.sh\" no_agent_done",
             "timeout": 10
           }
         ]
