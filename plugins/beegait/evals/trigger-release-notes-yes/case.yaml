@@ -1,0 +1,12 @@
+schema_version: "1.0"
+name: trigger-release-notes-yes
+description: "a prompt the release-notes skill's description names — the model invokes exactly /beegait:release-notes"
+tags: [trigger, release-notes]
+runs: 2
+expected_outcome: "one Skill call, to beegait:release-notes"
+context:
+  scaffold_script: scaffold.sh   # the scratch hub of _setup_hub.py, built into the run's workspace (needs --scaffold)
+execution:
+  max_turns: 4
+  timeout_seconds: 120
+  allowed_tools: [Read, Glob, Grep, Skill, "Bash(maistro:*)"]

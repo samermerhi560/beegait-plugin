@@ -1,0 +1,12 @@
+schema_version: "1.0"
+name: trigger-kb-curate-yes
+description: "a prompt the kb-curate skill's description names — the model invokes exactly /beegait:kb-curate"
+tags: [trigger, kb-curate]
+runs: 2
+expected_outcome: "one Skill call, to beegait:kb-curate"
+context:
+  scaffold_script: scaffold.sh   # the scratch hub of _setup_hub.py, built into the run's workspace (needs --scaffold)
+execution:
+  max_turns: 4
+  timeout_seconds: 120
+  allowed_tools: [Read, Glob, Grep, Skill, "Bash(maistro:*)"]

@@ -1,0 +1,12 @@
+schema_version: "1.0"
+name: trigger-kb-curate-no
+description: "a near-miss for the kb-curate skill (a plain question or a read-only ask) — no skill is invoked"
+tags: [trigger, kb-curate, should-not]
+runs: 2
+expected_outcome: "answered directly with read-only tools, zero Skill calls"
+context:
+  scaffold_script: scaffold.sh   # the scratch hub of _setup_hub.py, built into the run's workspace (needs --scaffold)
+execution:
+  max_turns: 4
+  timeout_seconds: 120
+  allowed_tools: [Read, Glob, Grep, Skill, "Bash(maistro:*)"]
