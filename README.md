@@ -17,8 +17,8 @@ nothing and decide nothing.
 2. **Claude Code** — `/plugin install beegait@claude-community` (the community marketplace; the listing is
    pending, card MV2-13 — until then the public mirror: `/plugin marketplace add samermerhi560/beegait-plugin`
    then `/plugin install beegait@beegait`).
-3. **Any agent** — `npx skills add https://skills.sh/p/<id> -a claude-code -a codex -a cursor` (the skills.sh
-   pack; pending, card MV2-13 — until then `npx skills add samermerhi560/beegait-plugin`, the same mirror).
+3. **Any agent** — `npx skills add https://skills.sh/p/17gXDTH7ymcrvLMl -a claude-code -a codex -a cursor` (the
+   skills.sh pack, read from this mirror's `main`; `npx skills add samermerhi560/beegait-plugin` is the same ten).
 
 Every implement runs on your own machine through the Beegait Runner — download it at https://app.beegait.ai
 (the trial's first step). The full page: [`docs/install-skills.md`](../../docs/install-skills.md).
