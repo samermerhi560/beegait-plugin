@@ -1,6 +1,6 @@
 {
   "name": "beegait",
-  "version": "0.2.154",
+  "version": "0.2.163",
   "description": "Beegait for Claude Code: the ten served procedures of a Beegait project (progress, checkpoint, build / implement / review a card, ground a story, release notes, user guide, knowledge-base curation) resolved from the working directory, plus the belt — three hooks that refuse a force push, an edit inside a card's 📝 Request and an agent-set Done.",
   "author": {
     "name": "Beegait",
