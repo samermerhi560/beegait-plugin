@@ -96,3 +96,8 @@ evals live in the engine repository only: the public mirror and the listed plugi
 The skills and the two manifests are GENERATED from the engine's builders (`playbooks.plugin_skill`):
 `python tools/build_plugin.py` rewrites them, `--check` refuses a stale tree (the engine gate's
 `plugin` step). Hand-edit only `hooks/`, `evals/`, and this file.
+
+---
+
+Copyright (c) 2026 PHX ITS UG (haftungsbeschränkt), Holzkirchen, Germany. Beegait™ is a trade mark of
+PHX ITS UG (haftungsbeschränkt) (EUTM 019419407).
