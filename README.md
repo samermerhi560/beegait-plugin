@@ -25,8 +25,8 @@ Every implement runs on your own machine through the Beegait Runner — download
 (the trial's first step). The full page: [`docs/install-skills.md`](../../docs/install-skills.md).
 
 The plugin needs the engine on PATH, 0.2.154 or newer (the door taught `playbook` at 0.2.149, the funnel
-line at 0.2.154): the Beegait Runner installs it and keeps it current; the pip package lands on PyPI as
-`beegait-engine` with the first public release (until then the two names on PyPI are placeholders) and a Python 3.10+ on PATH as `python` or `python3` for the hooks
+line at 0.2.154): the Beegait Runner installs it and keeps it current, or `pip install beegait-engine`
+(0.2.172 or newer carries the name) — and a Python 3.10+ on PATH as `python` or `python3` for the hooks
 (`hooks/run.sh` picks one; with neither, every tool call shows one notice that the belt is OFF — Claude
 Code lets a tool call proceed on any hook exit but 2, so the launcher says it loudly rather than never).
 Open a Beegait project folder
