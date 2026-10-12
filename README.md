@@ -13,7 +13,7 @@ nothing and decide nothing.
 
 ## Install — three lines
 
-1. **In a Beegait project** — nothing: the per-project stubs travel with the clone (`maistro clone <hub-git-url>`).
+1. **In a Beegait project** — nothing: the per-project stubs travel with the clone (`beegait clone <hub-git-url>`).
 2. **Claude Code** — `/plugin install beegait@claude-community` (the Claude plugin directory, listed
    since 2026-09-29; Claude Code's `claude-community` copy of it is refreshed by Anthropic in batches — until
    it carries Beegait, install straight from this mirror: `/plugin marketplace add samermerhi560/beegait-plugin`
@@ -33,7 +33,7 @@ Open a Beegait project folder
 (a folder holding `maistro.yml`, or any folder under it) and invoke a skill: the engine resolves the
 project from the working directory and serves the procedure. Outside a project folder the skill
 answers `no Beegait project here`, lists the projects of this machine and says how to get one
-(`maistro clone <hub-git-url>`).
+(`beegait clone <hub-git-url>`).
 
 ## Skills
 
